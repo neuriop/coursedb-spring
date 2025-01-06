@@ -4,10 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.neuro.coursedb.models.FilePath;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.List;
 
+@Service
 public class GenericReadWriteService {
 
     public <T> List<T> getData(Class<T> type){
