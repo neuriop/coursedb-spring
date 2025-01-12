@@ -22,6 +22,7 @@ public class NotificationController {
 
     @PutMapping(value = "/save")
     public ResponseEntity<String> saveNotifications(@RequestBody List<Notification> notifications){
+        System.out.println(notifications.toString());
         genericReadWriteService.writeData(notifications, Notification.class);
         return ResponseEntity.ok("Wrote list to file");
     }
